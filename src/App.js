@@ -158,7 +158,7 @@ function CoupleSection() {
             <div className="couple-card p-4">
               {/* Added couple-img class here */}
               <img 
-                src={process.env.PUBLIC_URL + '/image/shivam.jpg'} 
+                src={process.env.PUBLIC_URL + '/image/shivam.JPG'} 
                 alt="Groom" 
                 className="couple-img rounded-circle mb-3 border-gold" 
               />
@@ -171,7 +171,7 @@ function CoupleSection() {
             <div className="couple-card p-4">
               {/* Added couple-img class here */}
              <img 
-                src={process.env.PUBLIC_URL + '/image/jagriti.jpg'} 
+                src={process.env.PUBLIC_URL + '/image/jagriti.JPG'} 
                 alt="Bride" 
                 className="couple-img rounded-circle mb-3 border-gold" 
               />
@@ -223,8 +223,8 @@ function GallerySection() {
   const googleDriveLink = "https://drive.google.com/drive/folders/1QedVkFlB_FG612KAvc_NKcMYsvj_HNOi?usp=sharing";
 
   const engagementHighlights = [
-  { id: 1, url: process.env.PUBLIC_URL + "/image/eng.jpg" }, 
-  { id: 2, url: process.env.PUBLIC_URL + "/image/eng2.jpg" }  
+  { id: 1, url: process.env.PUBLIC_URL + "/image/eng.JPG" }, 
+  { id: 2, url: process.env.PUBLIC_URL + "/image/eng2.JPG" }  
 ];
 
   return (
