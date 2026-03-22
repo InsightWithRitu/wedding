@@ -157,7 +157,11 @@ function CoupleSection() {
           <div className="col-md-5 mb-4">
             <div className="couple-card p-4">
               {/* Added couple-img class here */}
-              <img src="/image/shivam.jpg" alt="Groom" className="couple-img rounded-circle mb-3 border-gold" />
+              <img 
+                src={process.env.PUBLIC_URL + '/image/shivam.jpg'} 
+                alt="Groom" 
+                className="couple-img rounded-circle mb-3 border-gold" 
+              />
               <h3 className="title-font text-maroon">Shivam Saxena</h3>
               <p className="text-muted">Born: 09 August 1997</p>
               <p>The perfect mix of logic and love. Ready to start this beautiful new chapter.</p>
@@ -166,7 +170,11 @@ function CoupleSection() {
           <div className="col-md-5 mb-4">
             <div className="couple-card p-4">
               {/* Added couple-img class here */}
-              <img src="/image/jagriti.jpg" alt="Bride" className="couple-img rounded-circle mb-3 border-gold" />
+             <img 
+                src={process.env.PUBLIC_URL + '/image/jagriti.jpg'} 
+                alt="Bride" 
+                className="couple-img rounded-circle mb-3 border-gold" 
+              />
               <h3 className="title-font text-maroon">Jagriti Shrivastava</h3>
               <p className="text-muted">Born: 09 October 2000</p>
               <p>Bringing light, joy, and grace into every moment. Waiting for the big day!</p>
@@ -215,9 +223,9 @@ function GallerySection() {
   const googleDriveLink = "https://drive.google.com/drive/folders/1QedVkFlB_FG612KAvc_NKcMYsvj_HNOi?usp=sharing";
 
   const engagementHighlights = [
-    { id: 1, url: "/image/eng.jpg" }, // Pehli Highlight Photo
-    { id: 2, url: "/image/eng2.jpg" }  // Dusri Highlight Photo
-  ];
+  { id: 1, url: process.env.PUBLIC_URL + "/image/eng.jpg" }, 
+  { id: 2, url: process.env.PUBLIC_URL + "/image/eng2.jpg" }  
+];
 
   return (
     <section id="gallery" className="gallery-section py-5 bg-cream">
