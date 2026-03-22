@@ -1,38 +1,213 @@
-.App {
-  text-align: center;
+/* Color Palette & Fonts */
+:root {
+  --maroon: #800000;
+  --gold: #D4AF37;
+  --cream: #FFFDD0;
+  --dark: #333333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cream);
+  color: var(--dark);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title-font {
+  font-family: 'Great Vibes', cursive;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+/* Custom Text Colors */
+.text-maroon { color: var(--maroon) !important; }
+.text-gold { color: var(--gold) !important; }
+.text-cream { color: var(--cream) !important; }
+.bg-maroon { background-color: var(--maroon) !important; }
+.bg-cream { background-color: var(--cream) !important; }
+
+/* Buttons */
+.btn-gold {
+  background-color: var(--gold);
+  color: var(--maroon);
+  font-weight: 600;
+  border: none;
+}
+.btn-gold:hover {
+  background-color: #b5952f;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.btn-maroon {
+  background-color: var(--maroon);
+  color: var(--cream);
+}
+.btn-outline-maroon {
+  border: 1px solid var(--maroon);
+  color: var(--maroon);
+}
+.btn-outline-gold {
+  border: 1px solid var(--gold);
+  color: var(--gold);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Landing Screen */
+.landing-screen {
+  height: 100vh;
+  background: radial-gradient(circle, #a52a2a, var(--maroon));
+}
+.floral-border {
+  border: 4px solid var(--gold);
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+.fade-in-text {
+  animation: fadeIn 2s ease-in-out;
+}
+.typewriter-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--gold);
+  animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+}
+.fade-in-delayed {
+  animation: fadeIn 4s ease-in-out;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--gold); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: var(--maroon);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.custom-navbar .nav-link {
+  color: var(--cream) !important;
+  font-weight: 500;
+  margin: 0 10px;
+}
+.custom-navbar .navbar-brand {
+  font-size: 2rem;
+}
+/* Mobile toggle button ka border gold karne ke liye */
+.custom-toggler.navbar-toggler {
+    border-color: #D4AF37 !important;
+}
+
+/* Hamburger icon (teento dandi) ko gold color dene ke liye */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(212, 175, 55, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+/* Mobile par menu items ke beech thoda gap aur background */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: #800000; /* Maroon background */
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 10px;
+        border: 1px solid #D4AF37;
+    }
+}
+/* Hero & Countdown */
+.hero-section {
+  background: url('https://www.transparenttextures.com/patterns/floral-motif.png') var(--cream);
+}
+.time-box {
+  background-color: var(--maroon);
+  color: var(--gold);
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.time-box h2 {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+}
+
+/* Couple & Events */
+.border-gold {
+  border: 4px solid var(--gold);
+}
+
+.couple-img {
+  width: 200px;           /* Image ki width fix kar di */
+  height: 200px;          /* Height bhi same rakhi taaki circle perfect bane */
+  object-fit: cover;      /* Isse photo stretch nahi hogi, bas center se crop ho jayegi */
+  border: 5px solid #D4AF37; /* Gold border jo aapne manga tha */
+  padding: 5px;           /* Border aur photo ke beech thoda gap */
+  background-color: white;
+}
+
+/* Card ko thoda aur sundar banane ke liye */
+.couple-card {
+  transition: transform 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.couple-card:hover {
+  transform: translateY(-10px); /* Hover karne par card thoda upar uthega */
+}
+
+/* Gallery Hover Overlay */
+.gallery-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.gallery-img-wrapper .overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(128, 0, 0, 0.7);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.gallery-img-wrapper:hover .overlay {
+  opacity: 1;
+}
+
+/* Custom Modal */
+.custom-modal {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+.modal-content {
+  background: var(--cream);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  border: 3px solid var(--gold);
+}
+
+/* Blessings Section */
+.blessings-section {
+  background-color: var(--maroon);
+  background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .blessings-form { width: 90% !important; }
+  .countdown { flex-wrap: wrap; }
+  .typewriter-text { font-size: 2rem; white-space: normal; border-right: none; animation: fadeIn 2s; }
 }
